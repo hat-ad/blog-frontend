@@ -44,39 +44,39 @@ const BlogDetails = () => {
   return (
     <>
       {contextHolder}
-      <div className="h-screen p-5 mx-auto sm:p-10 md:p-16 dark:bg-gray-800 dark:text-gray-100 flex items-center justify-center">
+      <div className="h-screen p-5 mx-auto sm:p-10 md:p-16 bg-gray-900 text-gray-100 flex items-center justify-center">
         <div className="flex flex-col max-w-3xl mx-auto overflow-hidden rounded">
           {blogsData?.image && (
             <Image
               layout="responsive"
-              width={50} // this is given as they are required params
-              height={50} // this is given as they are required params
+              width={50}
+              height={50}
               src={blogsData?.image || " "}
               alt=""
-              className="w-full h-60 sm:h-96 dark:bg-gray-500"
+              className="w-full h-60 sm:h-96 bg-gray-500"
             />
           )}
-          <div className="p-6 pb-12 m-4 mx-auto -mt-16 space-y-6 lg:max-w-2xl sm:px-10 sm:mx-12 lg:rounded-md dark:bg-gray-900">
+          <div className="p-6 pb-12 m-4 mx-auto -mt-16 space-y-6 lg:max-w-2xl sm:px-10 sm:mx-12 lg:rounded-md">
             <div className="space-y-2">
               <a
                 rel="noopener noreferrer"
                 href="#"
-                className="inline-block text-2xl font-semibold sm:text-3xl"
+                className="inline-block text-2xl font-semibold sm:text-3xl text-gray-900"
               >
                 {blogsData?.title}
               </a>
-              <p className="text-xs dark:text-gray-400">
+              <p className="text-xs text-gray-400">
                 By{" "}
                 <a
                   rel="noopener noreferrer"
                   href="#"
-                  className="text-xs hover:underline"
+                  className="text-xs hover:underline text-white"
                 >
                   {blogsData?.authorInfo?.name}
                 </a>
               </p>
             </div>
-            <div className="dark:text-gray-100">
+            <div className="text-gray-100">
               <p>{blogsData?.content}</p>
             </div>
           </div>

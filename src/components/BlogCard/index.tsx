@@ -12,10 +12,10 @@ const BlogCard: React.FC<{
   return (
     <div
       key={blog._id}
-      className="dark:bg-gray-800 dark:text-gray-50 container grid grid-cols-12 mx-auto"
+      className="bg-gray-800 text-gray-50 container grid grid-cols-12 mx-auto"
     >
       <div
-        className="bg-no-repeat bg-cover dark:bg-gray-700 col-span-full lg:col-span-4"
+        className="bg-no-repeat bg-cover bg-gray-700 col-span-full lg:col-span-4"
         style={{
           backgroundImage: `url(${blog.image})`,
           backgroundPosition: "center center",
@@ -45,7 +45,7 @@ const BlogCard: React.FC<{
         <Link
           rel="noopener noreferrer"
           href={`/blog/${blog.slug}`}
-          className="inline-flex items-center pt-2 pb-6 space-x-2 text-sm dark:text-violet-400"
+          className="inline-flex items-center pt-2 pb-6 space-x-2 text-sm text-violet-400"
         >
           <span>Read more</span>
           <svg
@@ -67,7 +67,7 @@ const BlogCard: React.FC<{
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
               fill="currentColor"
-              className="w-5 h-5 dark:text-gray-400"
+              className="w-5 h-5 text-gray-400"
             >
               <path
                 fill-rule="evenodd"

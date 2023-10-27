@@ -119,7 +119,7 @@ const BlogListing: React.FC = () => {
   return (
     <>
       {contextHolder}
-      <div className="h-screen dark:bg-gray-900 dark:text-gray-50">
+      <div className="h-screen bg-gray-900 text-gray-50">
         <div className="py-8">
           <div className="container mx-auto">
             <div className="flex justify-between items-center mb-4">
@@ -151,7 +151,7 @@ const BlogListing: React.FC = () => {
           </div>
         </div>
 
-        <div className="dark:bg-gray-900">
+        <div className="bg-gray-900">
           <div className="text-center py-6">
             <Pagination
               total={total}
