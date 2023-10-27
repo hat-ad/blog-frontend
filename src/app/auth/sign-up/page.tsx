@@ -85,11 +85,7 @@ const SignUp: React.FC = () => {
         content: response,
       });
     } else {
-      dispatch(
-        loginUser({
-          payload: response,
-        })
-      );
+      dispatch(loginUser(response));
     }
     setLoading(false);
   };
