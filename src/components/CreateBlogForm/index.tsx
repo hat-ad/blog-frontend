@@ -101,27 +101,29 @@ const CreateBlogForm: React.FC<CreateBlogFormProps> = ({
   const handleFileUpload = async (
     event: React.ChangeEvent<HTMLInputElement>
   ) => {
-    const selectedFile = event.target.files[0];
-    setFileList([selectedFile]);
-    if (selectedFile) {
-      messageApi.open({
-        type: "info",
-        content: "File uploading!",
-      });
-      const body = new FormData();
-      body.append("file", selectedFile);
-      const response = await upload(body);
-      if (typeof response === "string") {
+    if (event.target && event.target.files) {
+      const selectedFile = event.target?.files[0];
+      setFileList([selectedFile]);
+      if (selectedFile) {
         messageApi.open({
-          type: "error",
-          content: response,
+          type: "info",
+          content: "File uploading!",
         });
-      } else {
-        messageApi.open({
-          type: "success",
-          content: "File uploaded!",
-        });
-        setFile(response.location);
+        const body = new FormData();
+        body.append("file", selectedFile);
+        const response = await upload(body);
+        if (typeof response === "string") {
+          messageApi.open({
+            type: "error",
+            content: response,
+          });
+        } else {
+          messageApi.open({
+            type: "success",
+            content: "File uploaded!",
+          });
+          setFile(response.location);
+        }
       }
     }
   };
