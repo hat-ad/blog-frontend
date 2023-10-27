@@ -55,10 +55,12 @@ export const createBlog = async ({
   title,
   content,
   readTime,
+  image,
 }: {
   title: string;
   content: string;
   readTime: number;
+  image: string;
 }): Promise<{ blog: IBlog } | string> => {
   try {
     const response: ApiResponse<string, { blog: IBlog }> = await Api.post(
@@ -67,6 +69,7 @@ export const createBlog = async ({
         title,
         content,
         readTime,
+        image,
       }
     );
     return response.result ? response.result : response.message;
@@ -79,11 +82,13 @@ export const updateBlog = async ({
   content,
   readTime,
   slug,
+  image,
 }: {
   title: string;
   content: string;
   readTime: number;
   slug: string;
+  image: string;
 }): Promise<{ blog: IBlog } | string> => {
   try {
     const response: ApiResponse<string, { blog: IBlog }> = await Api.update(
@@ -93,6 +98,7 @@ export const updateBlog = async ({
         content,
         readTime,
         slug,
+        image,
       }
     );
     return response.result ? response.result : response.message;

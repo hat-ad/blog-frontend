@@ -19,7 +19,7 @@ const BlogCard: React.FC<{
         style={{
           backgroundImage: `url(${blog.image})`,
           backgroundPosition: "center center",
-          backgroundBlendMode: "multiply",
+          // backgroundBlendMode: "multiply",
           backgroundSize: "cover",
         }}
       ></div>

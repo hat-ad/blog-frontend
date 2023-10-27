@@ -90,7 +90,9 @@ const BlogListing: React.FC = () => {
       title: values.title,
       content: values.content,
       readTime: values.readTime,
+      image: values.image,
     };
+
     let response: { blog: IBlog } | string;
     if (values.editing && values.slug) {
       response = await updateBlog(values);
@@ -119,7 +121,7 @@ const BlogListing: React.FC = () => {
   return (
     <>
       {contextHolder}
-      <div className="h-screen bg-gray-900 text-gray-50">
+      <div className=" bg-gray-900 text-gray-50">
         <div className="py-8">
           <div className="container mx-auto">
             <div className="flex justify-between items-center mb-4">

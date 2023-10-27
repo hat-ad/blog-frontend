@@ -15,6 +15,14 @@ const nextConfig = {
         protocol: "https",
         hostname: "cf-assets.www.cloudflare.com",
       },
+      {
+        protocol: "http",
+        hostname: "localhost",
+      },
+      {
+        protocol: "https",
+        hostname: "backend-s2et.onrender.com",
+      },
     ],
   },
 };

@@ -48,6 +48,7 @@ const BlogDetails = () => {
         <div className="flex flex-col max-w-3xl mx-auto overflow-hidden rounded">
           {blogsData?.image && (
             <Image
+              loading="lazy"
               layout="responsive"
               width={50}
               height={50}

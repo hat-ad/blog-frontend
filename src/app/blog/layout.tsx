@@ -46,7 +46,7 @@ const BlogLayout = ({ children }: { children: React.ReactNode }) => {
             </button>
           </div>
         </Header>
-        <Content>{children}</Content>
+        <Content className="h-screen">{children}</Content>
       </Layout>
     </>
   );
